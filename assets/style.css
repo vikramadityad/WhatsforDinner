@@ -1,0 +1,6 @@
+.sm-card img {
+  width: 125px;
+  height: 200px;
+  object-fit: fill;
+  border-radius: 15px 15px 0 0;
+}
