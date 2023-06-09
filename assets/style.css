@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* classes for recipe result details and popup 
 
 .back_arrow {
@@ -20,6 +24,7 @@
 
 } */
 
+
 .ingredient_card {
   width: 200px !important;
 }
@@ -40,8 +45,9 @@
 
 }
 
+*/
 .Recipe_buttonDesg {
-
+  background-color: rgb(121, 121, 200);
 }
 */
 * {
