@@ -1,8 +1,10 @@
-/* .back_arrow {
+/* classes for recipe result details and popup 
+
+.back_arrow {
 
 } 
 
-.recpieDesc {
+.recpieDesc { 
 
 }
 
@@ -16,9 +18,22 @@
 
 .ingContainer {
 
+} */
+
+.ingredient_card {
+    width: 200px !important;
+
 }
 
-.Url_button {
+/* .Showall_button {
+
+}
+
+#popup {
+
+}
+
+.list_ingredients {
 
 }
 
