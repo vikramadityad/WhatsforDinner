@@ -1,3 +1,52 @@
+<<<<<<< HEAD
+/* classes for recipe result details and popup 
+
+.back_arrow {
+
+} 
+
+.recpieDesc { 
+
+}
+
+#recipe_image {
+
+}
+
+.recpieIngname {
+
+}
+
+.ingContainer {
+
+} */
+
+.ingredient_card {
+    width: 200px !important;
+
+}
+
+/* .Showall_button {
+
+}
+
+#popup {
+
+}
+
+.list_ingredients {
+
+}
+
+.recipe_buttonCont {
+
+}
+
+.Recipe_buttonDesg {
+
+}
+*/
+=======
 * {
   box-sizing: border-box;
 }
@@ -44,3 +93,4 @@
   border-radius: 0 0 20px 20px;
   color: white;
 }
+>>>>>>> main
