@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* classes for recipe result details and popup 
 
 .back_arrow {
@@ -45,3 +46,51 @@
 
 }
 */
+=======
+* {
+  box-sizing: border-box;
+}
+
+.bg-secondary {
+  background-color: #4e4f61 !important;
+}
+.bg-primary {
+  background-color: #5d5f96c5 !important;
+}
+
+.h1 {
+  font-size: 3.2rem;
+  color: rgba(124, 118, 118, 0.986);
+}
+.sm-card img {
+  width: 220px;
+  height: 250px;
+  object-fit: fill;
+  border-radius: 15px 15px 0 0;
+}
+
+.food-group {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.food-group h2 {
+  margin-right: 24rem;
+}
+.container-food-grp {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 25px;
+}
+.sm-card-container {
+  margin: 10px;
+}
+.sm-card-container p {
+  padding: 20px 0;
+  border-radius: 0 0 20px 20px;
+  color: white;
+}
+>>>>>>> main
