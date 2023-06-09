@@ -24,7 +24,6 @@
 
 } */
 
-
 .ingredient_card {
   width: 200px !important;
 }
@@ -50,6 +49,9 @@
   background-color: rgb(121, 121, 200);
 }
 */
+
+
+/* box sizing for entire page  */
 * {
   box-sizing: border-box;
 }
