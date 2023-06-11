@@ -49,8 +49,8 @@
 .Recipe_buttonDesg {
   background-color: rgb(121, 121, 200);
 }
-*/
 
+*/
 
 /* box sizing for entire page  */
 * {
@@ -60,6 +60,7 @@
 .bg-secondary {
   background-color: #4e4f61 !important;
 }
+
 .bg-primary {
   background-color: #5d5f96c5 !important;
 }
@@ -68,6 +69,7 @@
   font-size: 3.2rem;
   color: rgba(124, 118, 118, 0.986);
 }
+
 .sm-card img {
   width: 220px;
   height: 250px;
@@ -82,18 +84,22 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
+
 .food-group h2 {
   margin-right: 24rem;
 }
+
 .container-food-grp {
   display: flex;
   text-align: center;
   align-items: center;
   margin: 25px;
 }
+
 .sm-card-container {
   margin: 10px;
 }
+
 .sm-card-container p {
   padding: 20px 0;
   border-radius: 0 0 20px 20px;
@@ -147,17 +153,23 @@ header {
   min-height: 36px;
   margin: 0;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 65959db0436150b3001cd08a531ba02ce298d12f
 .logo-img {
   display: inline-block;
   width: auto;
   height: 36px;
   margin-right: 20px;
 }
+
 h1 {
   font-size: 36px;
   font-family: serif;
   margin-bottom: 10px;
 }
+
 .navigation {
   font-size: 22px;
   margin-left: auto;
@@ -198,7 +210,7 @@ h1 {
 
 .card-item {
   flex: 1;
-  max-width: 214px;
+  max-width: 100%;
   padding: 0 12px;
   font-size: 20px;
   text-align: center;
@@ -223,8 +235,29 @@ h1 {
   height: 219px;
   margin-bottom: 10px;
 }
+
 .card-name {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+
+@media screen and (min-width: 600px) {
+  .body {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .body {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1024) {
+  .body {
+    width: 100%;
+  }
 }
