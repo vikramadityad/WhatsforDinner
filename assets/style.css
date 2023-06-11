@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 /* classes for recipe result details and popup 
 
 .back_arrow {
@@ -149,6 +150,15 @@ header {
   border-bottom: 1px solid #000;
 }
 
+
+header p {
+  padding-top: 7px;
+  display:auto;
+  margin: 47px;
+  
+
+}
+
 .logo {
   font-size: 32px;
   font-weight: 600;
@@ -265,9 +275,19 @@ footer {
   background-color:white;
 
 }
-footer p{
+footer svg {
+  position: relative;
+  left: 93%;
+  margin-bottom: 15px;
+
   
 }
+footer p {
+  margin: 10px;
+
+  
+}
+
 @media screen and (min-width: 600px) {
   .body {
     width: 100%;
