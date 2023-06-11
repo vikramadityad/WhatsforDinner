@@ -91,6 +91,7 @@
 
 .container-food-grp {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   align-items: center;
   margin: 25px;
@@ -114,6 +115,7 @@
 .ing-cards-container {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 .ing-lg-card {
   text-align: center;
@@ -153,10 +155,7 @@ header {
   min-height: 36px;
   margin: 0;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 65959db0436150b3001cd08a531ba02ce298d12f
 .logo-img {
   display: inline-block;
   width: auto;
@@ -242,7 +241,6 @@ h1 {
   overflow: hidden;
 }
 
-
 @media screen and (min-width: 600px) {
   .body {
     width: 100%;
@@ -254,7 +252,6 @@ h1 {
     width: 100%;
   }
 }
-
 
 @media screen and (max-width: 1024) {
   .body {
