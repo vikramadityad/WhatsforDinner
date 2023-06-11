@@ -100,8 +100,39 @@
   color: white;
 }
 
+.back-arrow {
+  position: relative;
+  left: 93%;
+  margin-bottom: 30px;
+}
+.ing-cards-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.ing-lg-card {
+  text-align: center;
+  margin-right: 30px;
+  color: white;
+}
+.ing-lg-card img {
+  border-radius: 20px 20px 0 0;
+}
+.ing-lg-card p {
+  padding: 40px 0;
+  border-radius: 0 0 20px 20px;
+}
+.right-container {
+  display: flex;
+}
+.ingredient-select .igr-icons {
+  margin: 33px;
+}
+.right-container .card {
+  display: flex;
+  align-items: center;
+}
 /* header and search added */
-header{
+header {
   display: flex;
   align-items: center;
   padding: 22px 15px;
@@ -109,14 +140,14 @@ header{
   border-bottom: 1px solid #000;
 }
 
-.logo{
+.logo {
   font-size: 32px;
   font-weight: 600;
   font-family: Arial, sans-serif;
   min-height: 36px;
   margin: 0;
 }
-.logo-img{
+.logo-img {
   display: inline-block;
   width: auto;
   height: 36px;
