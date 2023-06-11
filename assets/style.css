@@ -241,6 +241,15 @@ h1 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+footer {
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 10px;
+  border:solid;
+  background-color: beige;
+  display: auto;
+
+}
 
 @media screen and (min-width: 600px) {
   .body {
