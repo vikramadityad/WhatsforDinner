@@ -152,6 +152,7 @@
 
 /*end of styling for search result details page and popup*/
 
+/* food group  */
 .top-food-group-container {
   display: flex;
   flex-wrap: wrap;
@@ -197,10 +198,10 @@
   color: white;
 }
 
+/* ingredient selection  */
 .back-arrow {
-  position: relative;
-  left: 93%;
-  margin-bottom: 30px;
+  margin: 20px;
+  height: 60px;
 }
 .ingredient-select {
   display: flex;
@@ -210,8 +211,9 @@
 
 .top-ingredients-container {
   display: flex;
+
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -287,11 +289,12 @@ header {
 
 .card {
   padding: 10px;
+  border-radius: 20px;
   box-shadow: 7px 7px 17px 7px #d8d8d8;
   min-height: 353px;
   min-width: 278px;
   text-align: center;
-  border-radius: solid;
+  /* border-radius: solid; */
 }
 
 .card-title {
