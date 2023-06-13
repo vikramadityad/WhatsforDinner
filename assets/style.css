@@ -152,6 +152,7 @@
 
 /*end of styling for search result details page and popup*/
 
+/* food group  */
 .top-food-group-container {
   display: flex;
   flex-wrap: wrap;
@@ -179,10 +180,6 @@
   padding-top: 50px;
 }
 
-.food-group h1 {
-  margin-right: 24rem;
-}
-
 .container-food-group {
   display: flex;
   flex-wrap: wrap;
@@ -201,10 +198,10 @@
   color: white;
 }
 
+/* ingredient selection  */
 .back-arrow {
-  position: relative;
-  left: 93%;
-  margin-bottom: 30px;
+  margin: 20px;
+  height: 60px;
 }
 .ingredient-select {
   display: flex;
@@ -214,8 +211,9 @@
 
 .top-ingredients-container {
   display: flex;
+
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -251,6 +249,35 @@
 .hide {
   display: none;
 }
+
+@media screen and (max-width: 1610px) {
+  .sm-card img {
+    width: 180px;
+    height: 200px;
+  }
+  .food-group .h1 {
+    margin-right: 20rem;
+  }
+}
+@media screen and (max-width: 1390px) {
+  .sm-card img {
+    width: 130px;
+    height: 175px;
+  }
+  .food-group .h1 {
+    margin-right: 12rem;
+  }
+}
+@media screen and (max-width: 1135px) {
+  .food-group .h1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 366px) {
+  .sm-card-container {
+    margin-left: 85px;
+  }
+}
 /* header and search added */
 header {
   display: flex;
@@ -261,9 +288,15 @@ header {
 }
 
 .card {
-
   min-height: 353px;
   min-width: 278px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 7px 7px 17px 7px #d8d8d8;
+  min-height: 353px;
+  min-width: 278px;
+  text-align: center;
+ 
 }
 
 .card-title {
@@ -411,26 +444,22 @@ h1 {
   object-fit: cover;
 }
 
-.footer-container{
-display: flex;
-justify-content: space-between;
-align-items:center ;
-padding: 10px;
-border-top: 1px solid black;
-
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid black;
 }
-.footer-icon svg{
-margin: 0 10px;
-
+.footer-icon svg {
+  margin: 0 10px;
 }
-.footer-logo{
+.footer-logo {
   margin-left: 50px;
 }
-.footer-icon{
+.footer-icon {
   margin-right: 50px;
 }
-
-
 
 @media screen and (min-width: 600px) {
   .body {
