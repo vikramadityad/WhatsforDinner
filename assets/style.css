@@ -390,21 +390,26 @@ h1 {
   object-fit: cover;
 }
 
-footer {
-  font-size: larger;
-  margin-bottom: 10px;
-  border-top: 1px solid black;
-  justify-content: center;
-  background-color: white;
+.footer-container{
+display: flex;
+justify-content: space-between;
+align-items:center ;
+padding: 10px;
+border-top: 1px solid black;
+
 }
-footer svg {
-  position: relative;
-  left: 93%;
-  margin-bottom: 15px;
+.footer-icon svg{
+margin: 0 10px;
+
 }
-footer p {
-  margin: 10px;
+.footer-logo{
+  margin-left: 50px;
 }
+.footer-icon{
+  margin-right: 50px;
+}
+
+
 
 @media screen and (min-width: 600px) {
   .body {
