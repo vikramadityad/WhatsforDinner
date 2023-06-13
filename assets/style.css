@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-/* classes for recipe result details and popup  */
-
 .main {
   display: flex;
   margin: 100px 30px;
@@ -433,9 +431,16 @@ footer p {
   color: rgba(124, 118, 118, 0.986);
 }
 
+.top-food-group-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .sm-card img {
-  width: 220px;
-  height: 250px;
+  width: 200px;
+  height: 220px;
   object-fit: fill;
   border-radius: 15px 15px 0 0;
 }
@@ -448,8 +453,9 @@ footer p {
   align-items: flex-end;
 }
 
-.food-group h2 {
+.food-group .h1 {
   margin-right: 24rem;
+  padding-top: 50px;
 }
 
 .container-food-grp {
@@ -469,11 +475,22 @@ footer p {
   border-radius: 0 0 20px 20px;
   color: white;
 }
+.ingredient-select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
 .back-arrow {
-  position: relative;
-  left: 93%;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+  width: 75px;
+}
+.top-ingredients-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 .ing-cards-container {
   display: flex;
@@ -484,9 +501,11 @@ footer p {
   text-align: center;
   margin-right: 30px;
   color: white;
+  width: 560px;
 }
 .ing-lg-card img {
   border-radius: 20px 20px 0 0;
+  width: 560px;
 }
 .ing-lg-card p {
   padding: 40px 0;
@@ -503,6 +522,9 @@ footer p {
   display: flex;
   align-items: center;
 }
+.hide {
+  display: none;
+}
 /* header and search added */
 header {
   display: flex;
@@ -512,34 +534,31 @@ header {
   border-bottom: 1px solid #000;
 }
 
-
-.card {
+.card-lg {
   padding: 10px;
-  box-shadow: 7px 7px 17px 7px #D8D8D8;
-  min-height: 353px;
-  min-width: 278px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  box-shadow: 7px 7px 17px 7px #d8d8d8;
+  max-height: 420px;
+  max-width: 300px;
   text-align: center;
-  border-radius: solid;
-
-
+  border-radius: 20px;
+  margin-left: 30px;
 }
 
-.card-title{
-border-bottom: 1px solid black;
-padding-bottom: 10px;
-
+.card-body h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
 
-.card-text{
-text-align: center;
-margin: 75px;
-
+.card-text {
+  margin: 75px 0;
+  text-align: center;
+  list-style: none;
 }
 
-.card-btn-primary {
-
-
-margin-top: 75px;
+.search-btn {
+  width: 60%;
+  margin-top: 75px;
 }
 
 .logo {
@@ -640,14 +659,13 @@ h1 {
   justify-content: center;
   padding: 0 12px;
   margin: 7px;
-
 }
-.hero-banner img{
-width: 100%;
-height: 300px;
-border-radius: 20px ;
-margin:15px;
-object-fit: cover;
+.hero-banner img {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  margin: 15px;
+  object-fit: cover;
 }
 
 footer {
@@ -655,20 +673,15 @@ footer {
   margin-bottom: 10px;
   border-top: 1px solid black;
   justify-content: center;
-  background-color:white;
-
+  background-color: white;
 }
 footer svg {
   position: relative;
   left: 93%;
   margin-bottom: 15px;
-
-  
 }
 footer p {
   margin: 10px;
-
-  
 }
 
 @media screen and (min-width: 600px) {
