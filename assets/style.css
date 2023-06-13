@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
 }
+
 .bg-secondary {
   background-color: #4e4f61 !important;
 }
@@ -32,6 +33,7 @@
 .recpieIngname {
   margin: 40px 0px;
 }
+
 .back_arrow {
   display: flex;
   justify-content: flex-end;
@@ -73,9 +75,11 @@
 .nut_card p {
   margin: 0px 0px;
 }
+
 .nut_card h5 {
   margin: 20px 0px;
 }
+
 .ing_smCard img {
   width: 80px;
   height: auto;
@@ -109,6 +113,7 @@
   border: none;
   cursor: pointer;
 }
+
 .popup-content ul {
   list-style: none;
 }
@@ -116,6 +121,7 @@
 .recpieNutname {
   margin: 40px 0;
 }
+
 .c-card-body {
   margin-top: 30px;
 }
@@ -134,10 +140,12 @@
   .main {
     flex-direction: column-reverse;
   }
+
   .ingredient_card,
   .nut-wrap {
     flex-direction: column;
   }
+
   .ing_smCard,
   .nut_card {
     width: 80%;
@@ -158,6 +166,8 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  flex: 33%;
+  margin-bottom: 50px
 }
 
 .sm-card img {
@@ -186,6 +196,8 @@
   text-align: center;
   align-items: center;
   margin: 25px;
+  flex: 66%;
+  justify-content: center;
 }
 
 .sm-card-container {
@@ -200,13 +212,18 @@
 
 /* ingredient selection  */
 .back-arrow {
-  margin: 20px;
+  margin: -60px 20px -35px 686px;
   height: 60px;
 }
+
 .ingredient-select {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  flex: 66%;
+  /* display: none; */
+
+
 }
 
 .top-ingredients-container {
@@ -221,26 +238,38 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+
 }
+
 .ing-lg-card {
   text-align: center;
   margin-right: 30px;
   color: white;
+  width: 426px;
+  height: auto;
 }
+
 .ing-lg-card img {
   border-radius: 20px 20px 0 0;
+  width: 426px;
+  height: auto;
 }
+
 .ing-lg-card p {
   padding: 40px 0;
   border-radius: 0 0 20px 20px;
 }
+
 .right-container {
   display: flex;
   flex-wrap: wrap;
+
 }
-.ingredient-select .igr-icons {
+
+.igr-icons {
   margin: 33px;
 }
+
 .right-container .card {
   display: flex;
   align-items: center;
@@ -255,29 +284,35 @@
     width: 180px;
     height: 200px;
   }
+
   .food-group .h1 {
     margin-right: 20rem;
   }
 }
+
 @media screen and (max-width: 1390px) {
   .sm-card img {
     width: 130px;
     height: 175px;
   }
+
   .food-group .h1 {
     margin-right: 12rem;
   }
 }
+
 @media screen and (max-width: 1135px) {
   .food-group .h1 {
     display: none;
   }
 }
+
 @media screen and (max-width: 366px) {
   .sm-card-container {
     margin-left: 85px;
   }
 }
+
 /* header and search added */
 header {
   display: flex;
@@ -285,6 +320,7 @@ header {
   padding: 22px 15px;
   min-height: 85px;
   border-bottom: 1px solid #000;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -296,36 +332,38 @@ header {
   min-height: 353px;
   min-width: 278px;
   text-align: center;
- 
+
 }
 
-.card-title {
+.d-card-title {
   border-bottom: 1px solid black;
-  
+
 
 }
 
 
 
-.card-body h2 {
+.d-card-body h2 {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
-  
+
 }
-.card-body {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-height: 420px;
-width: 300px;
-align-items: center;
-padding: 40px 25px;
-border: 1px solid rgba(0, 0, 0, 0.11);
-box-shadow: 7px 7px 17px 7px #d8d8d8;
-max-height: 420px;
-max-width: 300px;
-border-radius: 20px;
-margin-left: 40px;
+
+.d-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 420px;
+  width: 300px;
+  align-items: center;
+  padding: 40px 25px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  box-shadow: 7px 7px 17px 7px #d8d8d8;
+  max-height: 420px;
+  max-width: 300px;
+  border-radius: 20px;
+  margin-left: 40px;
+
 }
 
 .card-text {
@@ -429,6 +467,7 @@ h1 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 .hero-banner {
   display: flex;
   flex-wrap: wrap;
@@ -436,6 +475,7 @@ h1 {
   padding: 0 12px;
   margin: 7px;
 }
+
 .hero-banner img {
   width: 100%;
   height: 300px;
@@ -451,12 +491,15 @@ h1 {
   padding: 10px;
   border-top: 1px solid black;
 }
+
 .footer-icon svg {
   margin: 0 10px;
 }
+
 .footer-logo {
   margin-left: 50px;
 }
+
 .footer-icon {
   margin-right: 50px;
 }
@@ -478,4 +521,3 @@ h1 {
     width: 100%;
   }
 }
-
