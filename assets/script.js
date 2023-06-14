@@ -19,6 +19,11 @@ const smIconTitle1 = document.querySelector("#sm-icon-title-1");
 const smIconTitle2 = document.querySelector("#sm-icon-title-2");
 const smIconTitle3 = document.querySelector("#sm-icon-title-3");
 const smIconTitle4 = document.querySelector("#sm-icon-title-4");
+const ingSmCard1 = document.querySelector("#ing-sm-card-1");
+const ingSmCard2 = document.querySelector("#ing-sm-card-2");
+const ingSmCard3 = document.querySelector("#ing-sm-card-3");
+const ingSmCard4 = document.querySelector("#ing-sm-card-4");
+const ingList = document.querySelector("#ing-list");
 
 // added event listeners for the 5 food groups, and made the correct screen changes
 
@@ -35,6 +40,9 @@ proteinCard.addEventListener("click", function () {
   smIconTitle3.textContent = "Tuna";
   smIconImg4.src = "/assets/icons/pork.png";
   smIconTitle4.textContent = "Pork";
+  //   ingSmCard1.addEventListener("click", function () {
+  //     console.log(smIconTitle1.textContent);
+  //   });
 });
 veggiesCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
@@ -97,4 +105,22 @@ dairyCard.addEventListener("click", function () {
 backBtn.addEventListener("click", function () {
   foodGroup.classList.remove("hide");
   ingredientContainer.classList.add("hide");
+});
+
+ingSmCard1.addEventListener("click", function () {
+  let addIngredient = this.innerText;
+
+  console.log(addIngredient);
+});
+ingSmCard2.addEventListener("click", function () {
+  let addIngredient = this.innerText;
+  console.log(addIngredient);
+});
+ingSmCard3.addEventListener("click", function () {
+  let addIngredient = this.innerText;
+  console.log(this.innerText);
+});
+ingSmCard4.addEventListener("click", function () {
+  let addIngredient = this.innerText;
+  console.log(this.innerText);
 });
