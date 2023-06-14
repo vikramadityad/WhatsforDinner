@@ -12,7 +12,8 @@ const lgIngredientCard = document.querySelector("#lg-ingredient-card");
 const lgCardTitle = document.querySelector("#lg-card-title");
 const backBtn = document.querySelector("#back-btn");
 
-// console.log(veggiesImg);
+// added event listeners for the 5 food groups, and made the correct screen changes
+
 proteinCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
@@ -43,6 +44,8 @@ dairyCard.addEventListener("click", function () {
   lgIngredientCard.src = "/assets/images/dairy.jpg";
   lgCardTitle.textContent = "Dairy";
 });
+
+// added back button event listener along with correct screen changes to go back
 backBtn.addEventListener("click", function () {
   foodGroup.classList.remove("hide");
   ingredientContainer.classList.add("hide");
