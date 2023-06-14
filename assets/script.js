@@ -33,24 +33,21 @@ const cardOne = document.querySelector("#card1")
 const cardTwo = document.querySelector("#card2")
 const cardThree = document.querySelector("#card3")
 const cardFour = document.querySelector("#card4")
-const heroBanner = document.querySelector("#bannerid")
 
 cardOne.addEventListener("click", function() {
-  console.log("click")
-    heroBanner.classList.add("hide");
+  window.location.href=("recipeInfo.html")
 })
 
 cardTwo.addEventListener("click", function() {
-  console.log("click")
-  heroBanner.classList.add("hide");
+  window.location.href=("recipeInfo.html")
 })
 
 cardThree.addEventListener("click", function() {
-  heroBanner.classList.add("hide");
+  window.location.href=("recipeInfo.html")
 })
 
 cardFour.addEventListener("click", function() {
-  heroBanner.classList.add("hide");
+  window.location.href=("recipeInfo.html")
 })
 
 
