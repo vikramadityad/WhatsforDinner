@@ -26,6 +26,8 @@ const ingSmCard4 = document.querySelector("#ing-sm-card-4");
 const ingList = document.querySelector("#ing-list");
 const ingList2 = document.querySelector("#ing-list-2");
 const listIng1 = document.querySelector("#listIng1");
+const ingredientSelected = [];
+let addIngredient = "";
 
 
 // search_results_click - transfer to recipeinfo page
@@ -132,63 +134,82 @@ backBtn.addEventListener("click", function () {
 
 // small icon ingredient cards to add ingredients to the list search resipe card
 ingSmCard1.addEventListener("click", function () {
-  let addIngredient = this.innerText;
-  let newList1 = document.createElement("li");
-  let newList2 = document.createElement("li");
-  newList1.innerText = addIngredient;
-  newList2.innerText = addIngredient;
-  ingList.append(newList1);
-  ingList2.appendChild(newList2);
-  console.log(addIngredient);
+  if (addIngredient === this.innerText) {
+    return;
+  } else {
+    addIngredient = this.innerText;
+    ingredientSelected.push(addIngredient);
+    let newList1 = document.createElement("li");
+    let newList2 = document.createElement("li");
+    newList1.innerText = addIngredient;
+    newList2.innerText = addIngredient;
+    ingList.append(newList1);
+    ingList2.appendChild(newList2);
+    console.log(ingredientSelected);
+  }
 });
 ingSmCard2.addEventListener("click", function () {
-  let addIngredient = this.innerText;
-  let newList1 = document.createElement("li");
-  let newList2 = document.createElement("li");
-  newList1.innerText = addIngredient;
-  newList2.innerText = addIngredient;
-  ingList.append(newList1);
-  ingList2.appendChild(newList2);
-  console.log(addIngredient);
+  if (addIngredient === this.innerText) {
+    return;
+  } else {
+    addIngredient = this.innerText;
+    ingredientSelected.push(addIngredient);
+    let newList1 = document.createElement("li");
+    let newList2 = document.createElement("li");
+    newList1.innerText = addIngredient;
+    newList2.innerText = addIngredient;
+    ingList.append(newList1);
+    ingList2.appendChild(newList2);
+    console.log(ingredientSelected);
+  }
 });
 ingSmCard3.addEventListener("click", function () {
-  let addIngredient = this.innerText;
-  let newList1 = document.createElement("li");
-  let newList2 = document.createElement("li");
-  newList1.innerText = addIngredient;
-  newList2.innerText = addIngredient;
-  ingList.append(newList1);
-  ingList2.appendChild(newList2);
-  console.log(this.innerText);
+  if (addIngredient === this.innerText) {
+    return;
+  } else {
+    addIngredient = this.innerText;
+    ingredientSelected.push(addIngredient);
+    let newList1 = document.createElement("li");
+    let newList2 = document.createElement("li");
+    newList1.innerText = addIngredient;
+    newList2.innerText = addIngredient;
+    ingList.append(newList1);
+    ingList2.appendChild(newList2);
+    console.log(ingredientSelected);
+  }
 });
 ingSmCard4.addEventListener("click", function () {
-  let addIngredient = this.innerText;
-  let newList1 = document.createElement("li");
-  let newList2 = document.createElement("li");
-  newList1.innerText = addIngredient;
-  newList2.innerText = addIngredient;
-  ingList.append(newList1);
-  ingList2.appendChild(newList2);
-  console.log(this.innerText);
+  if (addIngredient === this.innerText) {
+    return;
+  } else {
+    addIngredient = this.innerText;
+    ingredientSelected.push(addIngredient);
+    let newList1 = document.createElement("li");
+    let newList2 = document.createElement("li");
+    newList1.innerText = addIngredient;
+    newList2.innerText = addIngredient;
+    ingList.append(newList1);
+    ingList2.appendChild(newList2);
+    console.log(ingredientSelected);
+  }
 });
-
 
 //added API URL and fetching the data from Edamam
 
-const appId = '4e7f7b70'; // Edamam API application key
-const appKey = 'f85978ceeafec0d3d9960d0e356738d6'; // Edamam API application key
+const appId = "4e7f7b70"; // Edamam API application key
+const appKey = "f85978ceeafec0d3d9960d0e356738d6"; // Edamam API application key
 const apiUrl = `https://api.edamam.com/search`; // API endpoint for recipe search
 
 async function searchRecipes(query) {
-    var ingridientQuery = encodeURIComponent(query); // Convert query into the URL friendly 
-    var url = `${apiUrl}?app_id=${appId}&app_key=${appKey}&q=${ingridientQuery}`;  //Var URL with the query 
+  var ingridientQuery = encodeURIComponent(query); // Convert query into the URL friendly
+  var url = `${apiUrl}?app_id=${appId}&app_key=${appKey}&q=${ingridientQuery}`; //Var URL with the query
 
-    try {
-        var response = await fetch(url);
-        var data = await response.json();
-        return data.hits; // Return the recipe results in objects
-    } catch (errorType) {
-        console.error('Error:', errorType);
-        return null;
-    }
+  try {
+    var response = await fetch(url);
+    var data = await response.json();
+    return data.hits; // Return the recipe results in objects
+  } catch (errorType) {
+    console.error("Error:", errorType);
+    return null;
+  }
 }
