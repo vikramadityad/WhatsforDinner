@@ -302,9 +302,47 @@
   }
 }
 
-@media screen and (max-width: 1135px) {
-  .food-group .h1 {
-    display: none;
+@media screen and (max-width: 1229px) {
+  .ing-lg-card {
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 1159px) {
+    .h1 {
+      display: none;
+    }
+  }
+  .container-food-group {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .ing-cards-container {
+    margin-top: 75px;
+    justify-content: flex-start;
+    margin-left: 15px;
+  }
+  .back-arrow {
+    margin-top: 40px;
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 473px) {
+  .ing-lg-card img {
+    width: 295px;
+  }
+  .ing-lg-card p {
+    width: 295px;
+  }
+  .ing-lg-card {
+    width: 295px;
+    margin-left: 22px;
+  }
+  .right-container {
+    justify-content: center;
   }
 }
 
