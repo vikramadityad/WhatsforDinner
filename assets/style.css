@@ -167,13 +167,13 @@
   width: 100%;
   justify-content: space-between;
   flex: 33%;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 .sm-card img {
   width: 220px;
   height: 250px;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
@@ -222,8 +222,6 @@
   align-items: center;
   flex: 66%;
   /* display: none; */
-
-
 }
 
 .top-ingredients-container {
@@ -238,7 +236,6 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-
 }
 
 .ing-lg-card {
@@ -246,13 +243,13 @@
   margin-right: 30px;
   color: white;
   width: 426px;
-  height: auto;
 }
 
 .ing-lg-card img {
   border-radius: 20px 20px 0 0;
   width: 426px;
-  height: auto;
+  height: 275px;
+  object-fit: cover;
 }
 
 .ing-lg-card p {
@@ -263,7 +260,6 @@
 .right-container {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .igr-icons {
@@ -332,21 +328,15 @@ header {
   min-height: 353px;
   min-width: 278px;
   text-align: center;
-
 }
 
 .d-card-title {
   border-bottom: 1px solid black;
-
-
 }
-
-
 
 .d-card-body h2 {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
-
 }
 
 .d-card-body {
@@ -363,7 +353,6 @@ header {
   max-width: 300px;
   border-radius: 20px;
   margin-left: 40px;
-
 }
 
 .card-text {
@@ -373,7 +362,6 @@ header {
 .search-btn {
   font-size: 20px;
 }
-
 
 .logo {
   font-size: 32px;
