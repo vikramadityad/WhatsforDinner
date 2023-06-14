@@ -363,6 +363,9 @@ header {
 .card-text {
   list-style: none;
 }
+ul li {
+  list-style: none;
+}
 
 .search-btn {
   font-size: 20px;
