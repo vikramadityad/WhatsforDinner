@@ -24,6 +24,8 @@ const ingSmCard2 = document.querySelector("#ing-sm-card-2");
 const ingSmCard3 = document.querySelector("#ing-sm-card-3");
 const ingSmCard4 = document.querySelector("#ing-sm-card-4");
 const ingList = document.querySelector("#ing-list");
+const ingList2 = document.querySelector("#ing-list-2");
+const listIng1 = document.querySelector("#listIng1");
 
 // added event listeners for the 5 food groups, and made the correct screen changes
 
@@ -40,9 +42,6 @@ proteinCard.addEventListener("click", function () {
   smIconTitle3.textContent = "Tuna";
   smIconImg4.src = "/assets/icons/pork.png";
   smIconTitle4.textContent = "Pork";
-  //   ingSmCard1.addEventListener("click", function () {
-  //     console.log(smIconTitle1.textContent);
-  //   });
 });
 veggiesCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
@@ -107,20 +106,44 @@ backBtn.addEventListener("click", function () {
   ingredientContainer.classList.add("hide");
 });
 
+// small icon ingredient cards to add ingredients to the list search resipe card
 ingSmCard1.addEventListener("click", function () {
   let addIngredient = this.innerText;
-
+  let newList1 = document.createElement("li");
+  let newList2 = document.createElement("li");
+  newList1.innerText = addIngredient;
+  newList2.innerText = addIngredient;
+  ingList.append(newList1);
+  ingList2.appendChild(newList2);
   console.log(addIngredient);
 });
 ingSmCard2.addEventListener("click", function () {
   let addIngredient = this.innerText;
+  let newList1 = document.createElement("li");
+  let newList2 = document.createElement("li");
+  newList1.innerText = addIngredient;
+  newList2.innerText = addIngredient;
+  ingList.append(newList1);
+  ingList2.appendChild(newList2);
   console.log(addIngredient);
 });
 ingSmCard3.addEventListener("click", function () {
   let addIngredient = this.innerText;
+  let newList1 = document.createElement("li");
+  let newList2 = document.createElement("li");
+  newList1.innerText = addIngredient;
+  newList2.innerText = addIngredient;
+  ingList.append(newList1);
+  ingList2.appendChild(newList2);
   console.log(this.innerText);
 });
 ingSmCard4.addEventListener("click", function () {
   let addIngredient = this.innerText;
+  let newList1 = document.createElement("li");
+  let newList2 = document.createElement("li");
+  newList1.innerText = addIngredient;
+  newList2.innerText = addIngredient;
+  ingList.append(newList1);
+  ingList2.appendChild(newList2);
   console.log(this.innerText);
 });
