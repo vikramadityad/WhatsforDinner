@@ -29,6 +29,30 @@ const listIng1 = document.querySelector("#listIng1");
 const ingredientSelected = [];
 let addIngredient = "";
 
+
+// search_results_click - transfer to recipeinfo page
+const cardOne = document.querySelector("#card1")
+const cardTwo = document.querySelector("#card2")
+const cardThree = document.querySelector("#card3")
+const cardFour = document.querySelector("#card4")
+
+cardOne.addEventListener("click", function() {
+  window.location.href=("recipeInfo.html")
+})
+
+cardTwo.addEventListener("click", function() {
+  window.location.href=("recipeInfo.html")
+})
+
+cardThree.addEventListener("click", function() {
+  window.location.href=("recipeInfo.html")
+})
+
+cardFour.addEventListener("click", function() {
+  window.location.href=("recipeInfo.html")
+})
+
+
 // added event listeners for the 5 food groups, and made the correct screen changes
 
 proteinCard.addEventListener("click", function () {
