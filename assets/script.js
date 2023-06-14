@@ -27,6 +27,33 @@ const ingList = document.querySelector("#ing-list");
 const ingList2 = document.querySelector("#ing-list-2");
 const listIng1 = document.querySelector("#listIng1");
 
+
+// search_results_click - transfer to recipeinfo page
+const cardOne = document.querySelector("#card1")
+const cardTwo = document.querySelector("#card2")
+const cardThree = document.querySelector("#card3")
+const cardFour = document.querySelector("#card4")
+const heroBanner = document.querySelector("#bannerid")
+
+cardOne.addEventListener("click", function() {
+  console.log("click")
+    heroBanner.classList.add("hide");
+})
+
+cardTwo.addEventListener("click", function() {
+  console.log("click")
+  heroBanner.classList.add("hide");
+})
+
+cardThree.addEventListener("click", function() {
+  heroBanner.classList.add("hide");
+})
+
+cardFour.addEventListener("click", function() {
+  heroBanner.classList.add("hide");
+})
+
+
 // added event listeners for the 5 food groups, and made the correct screen changes
 
 proteinCard.addEventListener("click", function () {
