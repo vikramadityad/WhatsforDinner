@@ -11,6 +11,14 @@ const dairyCard = document.querySelector("#dairy-card");
 const lgIngredientCard = document.querySelector("#lg-ingredient-card");
 const lgCardTitle = document.querySelector("#lg-card-title");
 const backBtn = document.querySelector("#back-btn");
+const smIconImg1 = document.querySelector("#sm-icon-img-1");
+const smIconImg2 = document.querySelector("#sm-icon-img-2");
+const smIconImg3 = document.querySelector("#sm-icon-img-3");
+const smIconImg4 = document.querySelector("#sm-icon-img-4");
+const smIconTitle1 = document.querySelector("#sm-icon-title-1");
+const smIconTitle2 = document.querySelector("#sm-icon-title-2");
+const smIconTitle3 = document.querySelector("#sm-icon-title-3");
+const smIconTitle4 = document.querySelector("#sm-icon-title-4");
 
 // added event listeners for the 5 food groups, and made the correct screen changes
 
@@ -19,30 +27,70 @@ proteinCard.addEventListener("click", function () {
   ingredientContainer.classList.remove("hide");
   lgIngredientCard.src = "/assets/images/protein.jpg";
   lgCardTitle.textContent = "Protein";
+  smIconImg1.src = "/assets/icons/chicken.png";
+  smIconTitle1.textContent = "Chicken";
+  smIconImg2.src = "/assets/icons/eggs.png";
+  smIconTitle2.textContent = "Eggs";
+  smIconImg3.src = "/assets/icons/tuna.png";
+  smIconTitle3.textContent = "Tuna";
+  smIconImg4.src = "/assets/icons/pork.png";
+  smIconTitle4.textContent = "Pork";
 });
 veggiesCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
   lgIngredientCard.src = "/assets/images/vegetables.jpg";
   lgCardTitle.textContent = "Veggies";
+  smIconImg1.src = "/assets/icons/tomato.png";
+  smIconTitle1.textContent = "Tomato";
+  smIconImg2.src = "/assets/icons/onion.png";
+  smIconTitle2.textContent = "Onion";
+  smIconImg3.src = "/assets/icons/potato.png";
+  smIconTitle3.textContent = "Potato";
+  smIconImg4.src = "/assets/icons/carrot.png";
+  smIconTitle4.textContent = "Carrot";
 });
 fruitCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
   lgIngredientCard.src = "/assets/images/fruit.jpg";
   lgCardTitle.textContent = "Fruit";
+  smIconImg1.src = "/assets/icons/apple.png";
+  smIconTitle1.textContent = "Apple";
+  smIconImg2.src = "/assets/icons/banana.png";
+  smIconTitle2.textContent = "Banana";
+  smIconImg3.src = "/assets/icons/mango.png";
+  smIconTitle3.textContent = "Mango";
+  smIconImg4.src = "/assets/icons/pear.png";
+  smIconTitle4.textContent = "Pear";
 });
 grainsCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
   lgIngredientCard.src = "/assets/images/grains.jpg";
   lgCardTitle.textContent = "Grains";
+  smIconImg1.src = "/assets/icons/bread.png";
+  smIconTitle1.textContent = "Bread";
+  smIconImg2.src = "/assets/icons/pasta.png";
+  smIconTitle2.textContent = "Pasta";
+  smIconImg3.src = "/assets/icons/rice.png";
+  smIconTitle3.textContent = "Rice";
+  smIconImg4.src = "/assets/icons/popcorn.png";
+  smIconTitle4.textContent = "Popcorn";
 });
 dairyCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
   lgIngredientCard.src = "/assets/images/dairy.jpg";
   lgCardTitle.textContent = "Dairy";
+  smIconImg1.src = "/assets/icons/milk.png";
+  smIconTitle1.textContent = "Milk";
+  smIconImg2.src = "/assets/icons/cheese.png";
+  smIconTitle2.textContent = "Cheese";
+  smIconImg3.src = "/assets/icons/yogurt.png";
+  smIconTitle3.textContent = "Yogurt";
+  smIconImg4.src = "/assets/icons/butter.png";
+  smIconTitle4.textContent = "Butter";
 });
 
 // added back button event listener along with correct screen changes to go back
