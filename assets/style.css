@@ -70,6 +70,7 @@
   box-shadow: 7px 7px 17px 7px #d8d8d8;
   min-width: 102px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .nut_card p {
@@ -187,7 +188,6 @@
 
 .food-group .h1 {
   margin-right: 24rem;
-  padding-top: 50px;
 }
 
 .container-food-group {
