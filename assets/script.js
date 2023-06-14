@@ -174,3 +174,24 @@ ingSmCard4.addEventListener("click", function () {
   ingList2.appendChild(newList2);
   console.log(this.innerText);
 });
+
+
+//added API URL and fetching the data from Edamam
+
+const appId = '4e7f7b70'; // Edamam API application key
+const appKey = 'f85978ceeafec0d3d9960d0e356738d6'; // Edamam API application key
+const apiUrl = `https://api.edamam.com/search`; // API endpoint for recipe search
+
+async function searchRecipes(query) {
+    var ingridientQuery = encodeURIComponent(query); // Convert query into the URL friendly 
+    var url = `${apiUrl}?app_id=${appId}&app_key=${appKey}&q=${ingridientQuery}`;  //Var URL with the query 
+
+    try {
+        var response = await fetch(url);
+        var data = await response.json();
+        return data.hits; // Return the recipe results in objects
+    } catch (errorType) {
+        console.error('Error:', errorType);
+        return null;
+    }
+}
