@@ -193,6 +193,15 @@ ingSmCard4.addEventListener("click", function () {
     console.log(ingredientSelected);
   }
 });
+//added eventlistener to the search card//
+const herobanner = document.querySelector("#herobanner");
+const searchbtn = document.querySelector("#search-btn");
+
+searchbtn.addEventListener("click", function () {
+    herobanner.classList.add("hide");
+    recipeResults.classList.remove("hide");
+
+});
 
 //added API URL and fetching the data from Edamam
 
