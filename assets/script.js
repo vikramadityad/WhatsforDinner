@@ -28,7 +28,11 @@ const ingList2 = document.querySelector("#ing-list-2");
 const listIng1 = document.querySelector("#listIng1");
 const ingredientSelected = [];
 let addIngredient = "";
-
+convertToStr = () => {
+  ingSearchTerm = ingredientSelected.join(", ");
+  console.log(ingSearchTerm);
+  return ingSearchTerm;
+};
 
 // search_results_click - transfer to recipeinfo page
 const cardOne = document.querySelector("#card1")
@@ -196,10 +200,44 @@ ingSmCard4.addEventListener("click", function () {
 //added eventlistener to the search card//
 const herobanner = document.querySelector("#herobanner");
 const searchbtn = document.querySelector("#search-btn");
+var resultClick = document.querySelectorAll ('#recipeResults .card-item')
 
 searchbtn.addEventListener("click", function () {
-    herobanner.classList.add("hide");
-    recipeResults.classList.remove("hide");
+   
+    var ingSearchTerm = "tomato, onion";
+
+var resultClick = document.querySelectorAll ('#recipeResults .card-item')
+// var heroContainer = document.querySelector ('#herobanner')
+// var resultRecipe = document.querySelector('#recipeResults')
+
+searchRecipes(ingSearchTerm).then((finalData)=> {
+  console.log('data', finalData);
+  var LocalFinalData = JSON.stringify(finalData)
+   localStorage.setItem("finalData", LocalFinalData);
+  
+  herobanner.classList.add("hide");
+
+  resultClick[0].querySelector('img').src = finalData[0].recipe.image
+  resultClick[1].querySelector('img').src = finalData[1].recipe.image
+  resultClick[2].querySelector('img').src = finalData[2].recipe.image
+  resultClick[3].querySelector('img').src = finalData[3].recipe.image
+
+  resultClick[0].querySelector('.card-name').innerText = finalData[0].recipe.label
+  resultClick[1].querySelector('.card-name').innerText = finalData[1].recipe.label
+  resultClick[2].querySelector('.card-name').innerText = finalData[2].recipe.label
+  resultClick[3].querySelector('.card-name').innerText = finalData[3].recipe.label
+  
+  
+  recipeResults.classList.remove('hide')
+
+
+})
+
+for(let i=0; i < res.length; i++) {
+  resultClick[i].addEventListener('click', function() {
+    localStorage.setItem("findex",this.dataset.index );
+
+  }) 
 
 });
 
@@ -216,9 +254,14 @@ async function searchRecipes(query) {
   try {
     var response = await fetch(url);
     var data = await response.json();
+    console.log(data.hits);
     return data.hits; // Return the recipe results in objects
   } catch (errorType) {
     console.error("Error:", errorType);
     return null;
   }
 }
+
+
+
+
