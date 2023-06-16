@@ -158,6 +158,10 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
+  
+  .cards-list {
+    flex-direction: column;
+  }
 }
 
 .Recipe_buttonDesg {
@@ -317,41 +321,6 @@
   }
 }
 
-@media screen and (max-width: 888px) {
-  .ing-cards-container {
-    margin-top: 75px;
-    justify-content: flex-start;
-    margin-left: 15px;
-  }
-  .back-arrow {
-    margin-top: 40px;
-    display: block;
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 473px) {
-  .ing-lg-card img {
-    width: 295px;
-  }
-  .ing-lg-card p {
-    width: 295px;
-  }
-  .ing-lg-card {
-    width: 295px;
-    margin-left: 22px;
-  }
-  .right-container {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 366px) {
-  .sm-card-container {
-    margin-left: 85px;
-  }
-}
-
 /* header and search added */
 header {
   display: flex;
@@ -461,7 +430,7 @@ h1 {
 
 .cards-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   padding: 0 12px;
   margin: 0;
@@ -553,5 +522,40 @@ h1 {
 @media screen and (max-width: 1024) {
   .body {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .ing-cards-container {
+    margin-top: 75px;
+    justify-content: flex-start;
+    margin-left: 15px;
+  }
+  .back-arrow {
+    margin-top: 40px;
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 473px) {
+  .ing-lg-card img {
+    width: 295px;
+  }
+  .ing-lg-card p {
+    width: 295px;
+  }
+  .ing-lg-card {
+    width: 295px;
+    margin-left: 22px;
+  }
+  .right-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 366px) {
+  .sm-card-container {
+    margin-left: 85px;
   }
 }
