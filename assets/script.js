@@ -49,6 +49,7 @@ cardFour.addEventListener("click", function () {
 });
 
 // added event listeners for the 5 food groups, and made the correct screen changes
+// Protein section
 proteinCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
@@ -63,6 +64,7 @@ proteinCard.addEventListener("click", function () {
   smIconImg4.src = "/assets/icons/pork.png";
   smIconTitle4.textContent = "Pork";
 });
+//Veggies section
 veggiesCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
@@ -77,6 +79,7 @@ veggiesCard.addEventListener("click", function () {
   smIconImg4.src = "/assets/icons/carrot.png";
   smIconTitle4.textContent = "Carrot";
 });
+// Fruit section
 fruitCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
@@ -91,6 +94,7 @@ fruitCard.addEventListener("click", function () {
   smIconImg4.src = "/assets/icons/pear.png";
   smIconTitle4.textContent = "Pear";
 });
+// Grains section
 grainsCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
@@ -105,6 +109,7 @@ grainsCard.addEventListener("click", function () {
   smIconImg4.src = "/assets/icons/popcorn.png";
   smIconTitle4.textContent = "Popcorn";
 });
+// Dairy section
 dairyCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
@@ -131,7 +136,7 @@ let pickIngredient = $(".ing_smCard").click(function (e) {
   e.stopPropagation();
   addIngredient = this.innerText;
   ingredientSelected.push(addIngredient);
-  ingSearchTerm = ingredientSelected.join(", ");
+  ingSearchTerm = ingredientSelected.join(",");
   let newList1 = document.createElement("li");
   let newList2 = document.createElement("li");
   newList1.innerText = addIngredient;
@@ -162,9 +167,8 @@ async function searchRecipes(query) {
 }
 
 for (i of searchBtn) {
+  // added loop so you can search with either button
   i.addEventListener("click", function () {
-    var ingSearchTerm = ingredientSelected.toString();
-    console.log(ingSearchTerm);
     var resultClick = document.querySelectorAll("#recipeResults .card-item");
     var herobanner = document.querySelector("#herobanner");
     var recipeResults = document.querySelector("#recipeResults");
