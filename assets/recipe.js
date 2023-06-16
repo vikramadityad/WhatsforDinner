@@ -1,3 +1,5 @@
+// Js for appeding recipeinfo.html with API data
+
 var bigImg = document.querySelector('#recipe_image img')
 var title = document.querySelector('.recpieDesc h2')
 var mealType = document.querySelector('.recpieDesc p')
