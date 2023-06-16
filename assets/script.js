@@ -19,44 +19,34 @@ const smIconTitle1 = document.querySelector("#sm-icon-title-1");
 const smIconTitle2 = document.querySelector("#sm-icon-title-2");
 const smIconTitle3 = document.querySelector("#sm-icon-title-3");
 const smIconTitle4 = document.querySelector("#sm-icon-title-4");
-const ingSmCard1 = document.querySelector("#ing-sm-card-1");
-const ingSmCard2 = document.querySelector("#ing-sm-card-2");
-const ingSmCard3 = document.querySelector("#ing-sm-card-3");
-const ingSmCard4 = document.querySelector("#ing-sm-card-4");
 const ingList = document.querySelector("#ing-list");
 const ingList2 = document.querySelector("#ing-list-2");
 const listIng1 = document.querySelector("#listIng1");
+const searchBtn = document.querySelectorAll(".search-btn");
 let addIngredient = "";
 const ingredientSelected = [];
 
-// const convertToStr = (ingredientSelected)=> {
-//   let ingSearchTerm = ingredientSelected.join(", ");
-//   console.log(ingSearchTerm);
-//   return ingSearchTerm;
-// };
-
 // search_results_click - transfer to recipeinfo page
-const cardOne = document.querySelector("#card1")
-const cardTwo = document.querySelector("#card2")
-const cardThree = document.querySelector("#card3")
-const cardFour = document.querySelector("#card4")
+const cardOne = document.querySelector("#card1");
+const cardTwo = document.querySelector("#card2");
+const cardThree = document.querySelector("#card3");
+const cardFour = document.querySelector("#card4");
 
-cardOne.addEventListener("click", function() {
-  window.location.href=("recipeInfo.html")
-})
+cardOne.addEventListener("click", function () {
+  window.location.href = "recipeInfo.html";
+});
 
-cardTwo.addEventListener("click", function() {
-  window.location.href=("recipeInfo.html")
-})
+cardTwo.addEventListener("click", function () {
+  window.location.href = "recipeInfo.html";
+});
 
-cardThree.addEventListener("click", function() {
-  window.location.href=("recipeInfo.html")
-})
+cardThree.addEventListener("click", function () {
+  window.location.href = "recipeInfo.html";
+});
 
-cardFour.addEventListener("click", function() {
-  window.location.href=("recipeInfo.html")
-})
-
+cardFour.addEventListener("click", function () {
+  window.location.href = "recipeInfo.html";
+});
 
 // added event listeners for the 5 food groups, and made the correct screen changes
 
@@ -137,68 +127,22 @@ backBtn.addEventListener("click", function () {
   ingredientContainer.classList.add("hide");
 });
 
-// small icon ingredient cards to add ingredients to the list search resipe card
-ingSmCard1.addEventListener("click", function () {
-  if (addIngredient === this.innerText) {
-    return;
-  } else {
-    addIngredient = this.innerText;
-    ingredientSelected.push(addIngredient);
-    let newList1 = document.createElement("li");
-    let newList2 = document.createElement("li");
-    newList1.innerText = addIngredient;
-    newList2.innerText = addIngredient;
-    ingList.append(newList1);
-    ingList2.appendChild(newList2);
-    console.log(ingredientSelected);
-  }
-});
-ingSmCard2.addEventListener("click", function () {
-  if (addIngredient === this.innerText) {
-    return;
-  } else {
-    addIngredient = this.innerText;
-    ingredientSelected.push(addIngredient);
-    let newList1 = document.createElement("li");
-    let newList2 = document.createElement("li");
-    newList1.innerText = addIngredient;
-    newList2.innerText = addIngredient;
-    ingList.append(newList1);
-    ingList2.appendChild(newList2);
-    console.log(ingredientSelected);
-  }
-});
-ingSmCard3.addEventListener("click", function () {
-  if (addIngredient === this.innerText) {
-    return;
-  } else {
-    addIngredient = this.innerText;
-    ingredientSelected.push(addIngredient);
-    let newList1 = document.createElement("li");
-    let newList2 = document.createElement("li");
-    newList1.innerText = addIngredient;
-    newList2.innerText = addIngredient;
-    ingList.append(newList1);
-    ingList2.appendChild(newList2);
-    console.log(ingredientSelected);
-  }
-});
-ingSmCard4.addEventListener("click", function () {
-  if (addIngredient === this.innerText) {
-    return;
-  } else {
-    addIngredient = this.innerText;
-    ingredientSelected.push(addIngredient);
-    let newList1 = document.createElement("li");
-    let newList2 = document.createElement("li");
-    newList1.innerText = addIngredient;
-    newList2.innerText = addIngredient;
-    ingList.append(newList1);
-    ingList2.appendChild(newList2);
-    console.log(ingredientSelected);
-  }
-});
+// small icon ingredient cards to add ingredients to the list search recipe card
 
+let pickIngredient = $(".ing_smCard").click(function (e) {
+  e.stopPropagation();
+  addIngredient = this.innerText;
+  ingredientSelected.push(addIngredient);
+  ingSearchTerm = ingredientSelected.join(", ");
+  let newList1 = document.createElement("li");
+  let newList2 = document.createElement("li");
+  newList1.innerText = addIngredient;
+  newList2.innerText = addIngredient;
+  ingList.append(newList1);
+  ingList2.appendChild(newList2);
+
+  console.log(ingSearchTerm);
+});
 
 //added API URL and fetching the data from Edamam
 
@@ -221,51 +165,43 @@ async function searchRecipes(query) {
   }
 }
 
-//added eventlistener to the search card//
-// const herobanner = document.querySelector("#herobanner");
-const searchbtn = document.querySelectorAll(".search-btn")[1];
-// var resultClick = document.querySelectorAll ('#recipeResults .card-item');
+// const searchbtn = document.querySelectorAll(".search-btn")[1];
+for (i of searchBtn) {
+  i.addEventListener("click", function () {
+    var ingSearchTerm = ingredientSelected.toString();
+    console.log(ingSearchTerm);
+    var resultClick = document.querySelectorAll("#recipeResults .card-item");
+    var herobanner = document.querySelector("#herobanner");
+    var recipeResults = document.querySelector("#recipeResults");
 
-// var urlHistory = [];
+    searchRecipes(ingSearchTerm).then((finalData) => {
+      console.log("data", finalData);
+      var LocalFinalData = JSON.stringify(finalData);
+      localStorage.setItem("finalData", LocalFinalData);
 
+      herobanner.classList.add("hide");
 
-searchbtn.addEventListener("click", function () {
-console.log(searchbtn);
-var ingSearchTerm = ingredientSelected.toString();
-console.log(ingSearchTerm);
-var resultClick = document.querySelectorAll ('#recipeResults .card-item');
-var herobanner = document.querySelector ('#herobanner');
-var recipeResults = document.querySelector('#recipeResults');
+      resultClick[0].querySelector("img").src = finalData[0].recipe.image;
+      resultClick[1].querySelector("img").src = finalData[1].recipe.image;
+      resultClick[2].querySelector("img").src = finalData[2].recipe.image;
+      resultClick[3].querySelector("img").src = finalData[3].recipe.image;
 
-searchRecipes(ingSearchTerm).then((finalData)=> {
-  console.log('data', finalData);
-  var LocalFinalData = JSON.stringify(finalData);
-   localStorage.setItem("finalData", LocalFinalData);
-  
-  herobanner.classList.add("hide");
+      resultClick[0].querySelector(".card-name").innerText =
+        finalData[0].recipe.label;
+      resultClick[1].querySelector(".card-name").innerText =
+        finalData[1].recipe.label;
+      resultClick[2].querySelector(".card-name").innerText =
+        finalData[2].recipe.label;
+      resultClick[3].querySelector(".card-name").innerText =
+        finalData[3].recipe.label;
 
-  resultClick[0].querySelector('img').src = finalData[0].recipe.image
-  resultClick[1].querySelector('img').src = finalData[1].recipe.image
-  resultClick[2].querySelector('img').src = finalData[2].recipe.image
-  resultClick[3].querySelector('img').src = finalData[3].recipe.image
+      recipeResults.classList.remove("hide");
 
-  resultClick[0].querySelector('.card-name').innerText = finalData[0].recipe.label
-  resultClick[1].querySelector('.card-name').innerText = finalData[1].recipe.label
-  resultClick[2].querySelector('.card-name').innerText = finalData[2].recipe.label
-  resultClick[3].querySelector('.card-name').innerText = finalData[3].recipe.label
-  
-  recipeResults.classList.remove('hide');
-
-for(let i=0; i < resultClick.length; i++) {
-  resultClick[i].addEventListener('click', function() {
-    localStorage.setItem("findex",this.dataset.index );
-    // urlHistory.push(JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.url);
-    // sessionStorage.setItem("History", urlHistory);
-   });
-  }
-
-  })
-
-})
-
-
+      for (let i = 0; i < resultClick.length; i++) {
+        resultClick[i].addEventListener("click", function () {
+          localStorage.setItem("findex", this.dataset.index);
+        });
+      }
+    });
+  });
+}
