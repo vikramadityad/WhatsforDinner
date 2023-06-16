@@ -26,13 +26,14 @@ const ingSmCard4 = document.querySelector("#ing-sm-card-4");
 const ingList = document.querySelector("#ing-list");
 const ingList2 = document.querySelector("#ing-list-2");
 const listIng1 = document.querySelector("#listIng1");
-const ingredientSelected = [];
 let addIngredient = "";
-convertToStr = () => {
-  ingSearchTerm = ingredientSelected.join(", ");
-  console.log(ingSearchTerm);
-  return ingSearchTerm;
-};
+const ingredientSelected = [];
+
+// const convertToStr = (ingredientSelected)=> {
+//   let ingSearchTerm = ingredientSelected.join(", ");
+//   console.log(ingSearchTerm);
+//   return ingSearchTerm;
+// };
 
 // search_results_click - transfer to recipeinfo page
 const cardOne = document.querySelector("#card1")
@@ -197,49 +198,7 @@ ingSmCard4.addEventListener("click", function () {
     console.log(ingredientSelected);
   }
 });
-//added eventlistener to the search card//
-const herobanner = document.querySelector("#herobanner");
-const searchbtn = document.querySelector("#search-btn");
-var resultClick = document.querySelectorAll ('#recipeResults .card-item')
 
-searchbtn.addEventListener("click", function () {
-   
-    var ingSearchTerm = "tomato, onion";
-
-var resultClick = document.querySelectorAll ('#recipeResults .card-item')
-// var heroContainer = document.querySelector ('#herobanner')
-// var resultRecipe = document.querySelector('#recipeResults')
-
-searchRecipes(ingSearchTerm).then((finalData)=> {
-  console.log('data', finalData);
-  var LocalFinalData = JSON.stringify(finalData)
-   localStorage.setItem("finalData", LocalFinalData);
-  
-  herobanner.classList.add("hide");
-
-  resultClick[0].querySelector('img').src = finalData[0].recipe.image
-  resultClick[1].querySelector('img').src = finalData[1].recipe.image
-  resultClick[2].querySelector('img').src = finalData[2].recipe.image
-  resultClick[3].querySelector('img').src = finalData[3].recipe.image
-
-  resultClick[0].querySelector('.card-name').innerText = finalData[0].recipe.label
-  resultClick[1].querySelector('.card-name').innerText = finalData[1].recipe.label
-  resultClick[2].querySelector('.card-name').innerText = finalData[2].recipe.label
-  resultClick[3].querySelector('.card-name').innerText = finalData[3].recipe.label
-  
-  
-  recipeResults.classList.remove('hide')
-
-
-})
-
-for(let i=0; i < res.length; i++) {
-  resultClick[i].addEventListener('click', function() {
-    localStorage.setItem("findex",this.dataset.index );
-
-  }) 
-
-});
 
 //added API URL and fetching the data from Edamam
 
@@ -262,6 +221,51 @@ async function searchRecipes(query) {
   }
 }
 
+//added eventlistener to the search card//
+// const herobanner = document.querySelector("#herobanner");
+const searchbtn = document.querySelectorAll(".search-btn")[1];
+// var resultClick = document.querySelectorAll ('#recipeResults .card-item');
 
+// var urlHistory = [];
+
+
+searchbtn.addEventListener("click", function () {
+console.log(searchbtn);
+var ingSearchTerm = ingredientSelected.toString();
+console.log(ingSearchTerm);
+var resultClick = document.querySelectorAll ('#recipeResults .card-item');
+var herobanner = document.querySelector ('#herobanner');
+var recipeResults = document.querySelector('#recipeResults');
+
+searchRecipes(ingSearchTerm).then((finalData)=> {
+  console.log('data', finalData);
+  var LocalFinalData = JSON.stringify(finalData);
+   localStorage.setItem("finalData", LocalFinalData);
+  
+  herobanner.classList.add("hide");
+
+  resultClick[0].querySelector('img').src = finalData[0].recipe.image
+  resultClick[1].querySelector('img').src = finalData[1].recipe.image
+  resultClick[2].querySelector('img').src = finalData[2].recipe.image
+  resultClick[3].querySelector('img').src = finalData[3].recipe.image
+
+  resultClick[0].querySelector('.card-name').innerText = finalData[0].recipe.label
+  resultClick[1].querySelector('.card-name').innerText = finalData[1].recipe.label
+  resultClick[2].querySelector('.card-name').innerText = finalData[2].recipe.label
+  resultClick[3].querySelector('.card-name').innerText = finalData[3].recipe.label
+  
+  recipeResults.classList.remove('hide');
+
+for(let i=0; i < resultClick.length; i++) {
+  resultClick[i].addEventListener('click', function() {
+    localStorage.setItem("findex",this.dataset.index );
+    // urlHistory.push(JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.url);
+    // sessionStorage.setItem("History", urlHistory);
+   });
+  }
+
+  })
+
+})
 
 
