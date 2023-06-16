@@ -1,5 +1,4 @@
-// script for popup to show all ingredients
-// openPopup ()
+// bring over elements
 const foodGroup = document.querySelector("#foodGroup");
 const ingredientContainer = document.querySelector("#ingredientContainer");
 const recipeResults = document.querySelector("#recipeResults");
@@ -23,15 +22,16 @@ const ingList = document.querySelector("#ing-list");
 const ingList2 = document.querySelector("#ing-list-2");
 const listIng1 = document.querySelector("#listIng1");
 const searchBtn = document.querySelectorAll(".search-btn");
-let addIngredient = "";
-const ingredientSelected = [];
-
-// search_results_click - transfer to recipeinfo page
 const cardOne = document.querySelector("#card1");
 const cardTwo = document.querySelector("#card2");
 const cardThree = document.querySelector("#card3");
 const cardFour = document.querySelector("#card4");
 
+// variables
+let addIngredient = "";
+const ingredientSelected = [];
+
+// search_results_click - transfer to recipeinfo page
 cardOne.addEventListener("click", function () {
   window.location.href = "recipeInfo.html";
 });
@@ -49,7 +49,6 @@ cardFour.addEventListener("click", function () {
 });
 
 // added event listeners for the 5 food groups, and made the correct screen changes
-
 proteinCard.addEventListener("click", function () {
   foodGroup.classList.add("hide");
   ingredientContainer.classList.remove("hide");
@@ -128,7 +127,6 @@ backBtn.addEventListener("click", function () {
 });
 
 // small icon ingredient cards to add ingredients to the list search recipe card
-
 let pickIngredient = $(".ing_smCard").click(function (e) {
   e.stopPropagation();
   addIngredient = this.innerText;
@@ -140,12 +138,10 @@ let pickIngredient = $(".ing_smCard").click(function (e) {
   newList2.innerText = addIngredient;
   ingList.append(newList1);
   ingList2.appendChild(newList2);
-
   console.log(ingSearchTerm);
 });
 
 //added API URL and fetching the data from Edamam
-
 const appId = "4e7f7b70"; // Edamam API application key
 const appKey = "f85978ceeafec0d3d9960d0e356738d6"; // Edamam API application key
 const apiUrl = `https://api.edamam.com/search`; // API endpoint for recipe search
@@ -165,7 +161,6 @@ async function searchRecipes(query) {
   }
 }
 
-// const searchbtn = document.querySelectorAll(".search-btn")[1];
 for (i of searchBtn) {
   i.addEventListener("click", function () {
     var ingSearchTerm = ingredientSelected.toString();
