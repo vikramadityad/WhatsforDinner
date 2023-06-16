@@ -30,6 +30,7 @@ const cardFour = document.querySelector("#card4");
 // variables
 let addIngredient = "";
 const ingredientSelected = [];
+let ingSearchTerm = "";
 
 // search_results_click - transfer to recipeinfo page
 cardOne.addEventListener("click", function () {
@@ -135,6 +136,11 @@ backBtn.addEventListener("click", function () {
 let pickIngredient = $(".ing_smCard").click(function (e) {
   e.stopPropagation();
   addIngredient = this.innerText;
+  for (i = 0; i < ingredientSelected.length; i++) {
+    if (ingredientSelected.includes(addIngredient)) {
+      return;
+    }
+  }
   ingredientSelected.push(addIngredient);
   ingSearchTerm = ingredientSelected.join(",");
   let newList1 = document.createElement("li");
@@ -169,6 +175,9 @@ async function searchRecipes(query) {
 for (i of searchBtn) {
   // added loop so you can search with either button
   i.addEventListener("click", function () {
+    if (!ingSearchTerm) {
+      return;
+    }
     var resultClick = document.querySelectorAll("#recipeResults .card-item");
     var herobanner = document.querySelector("#herobanner");
     var recipeResults = document.querySelector("#recipeResults");
