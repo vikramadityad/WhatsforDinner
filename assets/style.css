@@ -158,7 +158,7 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
-  
+
   .cards-list {
     flex-direction: column;
   }
@@ -507,7 +507,23 @@ h1 {
   margin-right: 50px;
 }
 
-@media screen and (min-width: 600px) {
+/* Vegan section page  */
+.vegan-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+vegan-img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.vegan-title {
+  text-align: center;
+  width: 700px;
+}
+.vegan-p @media screen and (min-width: 600px) {
   .body {
     width: 100%;
   }
