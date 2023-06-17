@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
 .bg-secondary {
   background-color: #4e4f61 !important;
 }
@@ -558,11 +566,6 @@ h1 {
 }
 .vegan-right ul li {
   list-style: inside decimal;
-}
-.vegan-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 /* media queries  */
