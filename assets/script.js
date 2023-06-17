@@ -26,6 +26,8 @@ const cardOne = document.querySelector("#card1");
 const cardTwo = document.querySelector("#card2");
 const cardThree = document.querySelector("#card3");
 const cardFour = document.querySelector("#card4");
+var historyRecipe = document.querySelector('.dropdown-menu')
+
 
 // variables
 let addIngredient = "";
@@ -216,3 +218,14 @@ for (i of searchBtn) {
     });
   });
 }
+
+function RenderHistory() {
+  var historyUrl = JSON.parse(localStorage.getItem("finalData"))
+  console.log(historyUrl)
+  for (i = 0; i < 5; i++) {
+      var html = `<li><a class="dropdown-item" href="${historyUrl[i].recipe.url}">${historyUrl[i].recipe.label}</a></li>`
+      historyRecipe.insertAdjacentHTML("beforeend",html)
+
+}
+}
+RenderHistory();
