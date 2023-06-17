@@ -47,8 +47,6 @@ randBtn.addEventListener("click", function () {
         veganRecipeList.appendChild(Li);
         veganRecipeList.appendChild(breakLine);
       }
-      // veganIngredientList.removeChild();
-      // veganRecipeList.removeChild();
     })
     .catch((e) => {
       console.log("error", e);
