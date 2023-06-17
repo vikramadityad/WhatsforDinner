@@ -6,13 +6,18 @@ const veganRecipeList = document.querySelector("#vegan-recipe");
 const veganIngredientList = document.querySelector("#vegan-ingredient-list");
 const vgIngTitle = document.querySelector("#vg-ing-title");
 const vgRecTitle = document.querySelector("#vg-rec-title");
+const veganFooter = document.querySelector(".vegan-footer");
 let ing = "";
 // let num = "";
 // let step = 1;
 
 randBtn.addEventListener("click", function () {
+  veganFooter.classList.remove("vegan-footer");
   let randomRecipe = Math.floor(Math.random() * 300) + 1;
   const url = `https://the-vegan-recipes-db.p.rapidapi.com/${randomRecipe}?rapidapi-key=a849f1b857msh721556f52b05562p17c59ajsn2cdc343edbaa&rapidapi-host=the-vegan-recipes-db.p.rapidapi.com`;
+
+  veganIngredientList.innerText = "";
+  veganRecipeList.innerText = "";
 
   fetch(url)
     .then((res) => {
@@ -38,7 +43,7 @@ randBtn.addEventListener("click", function () {
         ing = data.method[j];
         let recLi = ing[`Step ${step}`];
         console.log(recLi);
-        Li.innerText = `${j + 1}:    ${recLi}`;
+        Li.innerText = `${recLi}`;
         veganRecipeList.appendChild(Li);
         veganRecipeList.appendChild(breakLine);
       }

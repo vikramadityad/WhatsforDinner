@@ -547,11 +547,22 @@ h1 {
 .vegan-left ul {
   padding: 0;
 }
+.vegan-left ul li {
+  list-style: inside disc;
+}
 .vegan-right {
   width: 30%;
 }
 .vegan-right ul {
   padding: 0;
+}
+.vegan-right ul li {
+  list-style: inside decimal;
+}
+.vegan-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* media queries  */
