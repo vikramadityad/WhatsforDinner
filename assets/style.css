@@ -513,17 +513,30 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
-vegan-img {
+.vegan-image {
   width: 600px;
-  height: 600px;
+  height: 400px;
   object-fit: cover;
   border-radius: 20px;
+  margin-top: 30px;
 }
 .vegan-title {
   text-align: center;
   width: 700px;
 }
-.vegan-p @media screen and (min-width: 600px) {
+.vegan-p {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 1000px;
+}
+.vegan-btn {
+  font-size: 2rem;
+  border-radius: 50px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 600px) {
   .body {
     width: 100%;
   }
