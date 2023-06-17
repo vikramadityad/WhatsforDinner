@@ -137,7 +137,10 @@ let pickIngredient = $(".ing_smCard").click(function (e) {
   e.stopPropagation();
   addIngredient = this.innerText;
   for (i = 0; i < ingredientSelected.length; i++) {
-    if (ingredientSelected.includes(addIngredient)) {
+    if (
+      ingredientSelected.includes(addIngredient) ||
+      ingredientSelected.length >= 5
+    ) {
       return;
     }
   }
