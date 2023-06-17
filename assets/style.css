@@ -567,9 +567,18 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
   .body {
     width: 100%;
+  }
+  .vegan-image {
+    width: 300px !important;
+  }
+  .vegan-p {
+    width: 350px;
+  }
+  .vegan-title {
+    width: 300px;
   }
 }
 
