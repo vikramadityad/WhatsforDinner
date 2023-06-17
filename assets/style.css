@@ -108,7 +108,6 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  display: none;
   padding: 10px;
   box-shadow: 2px 2px 2px 2px #d8d8d8;
   min-width: 400px;
