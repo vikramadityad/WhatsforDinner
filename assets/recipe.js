@@ -7,9 +7,15 @@ var calNum = document.querySelectorAll('.nut-wrap .nut_card p')[0]
 var proNum = document.querySelectorAll('.nut-wrap .nut_card p')[1]
 var fatNum = document.querySelectorAll('.nut-wrap .nut_card p')[2]
 var urlRecipe = document.querySelector('.Recipe_buttonDesg')
+<<<<<<< HEAD
 var historyRecipe = document.querySelector('.dropdown-menu')
 
 
+=======
+var showAllbtn = document.querySelector(".Showall_button")
+var popupContent = document.querySelector(".popup-content")
+var closebtn = document.querySelector(".close-btn")
+>>>>>>> 38a6c31e9d14c0527d14157fa8e9bd30aa141cd5
 
 if(bigImg){
   bigImg.src = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.image
@@ -39,6 +45,7 @@ if(urlRecipe) {
     urlRecipe.href = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.url
 }
 
+<<<<<<< HEAD
 
 
 
@@ -53,3 +60,13 @@ function RenderHistory() {
 }
 RenderHistory();
 
+=======
+showAllbtn.addEventListener("click", function(){
+popupContent.classList.remove("hide")
+
+})
+    
+closebtn.addEventListener("click", function(){
+    popupContent.classList.add("hide")
+})
+>>>>>>> 38a6c31e9d14c0527d14157fa8e9bd30aa141cd5

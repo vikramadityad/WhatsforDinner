@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
 .bg-secondary {
   background-color: #4e4f61 !important;
 }
@@ -100,7 +108,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  display: none;
   padding: 10px;
   box-shadow: 2px 2px 2px 2px #d8d8d8;
   min-width: 400px;
@@ -558,11 +565,6 @@ h1 {
 }
 .vegan-right ul li {
   list-style: inside decimal;
-}
-.vegan-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 /* media queries  */
