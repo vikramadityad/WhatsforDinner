@@ -7,6 +7,9 @@ var calNum = document.querySelectorAll('.nut-wrap .nut_card p')[0]
 var proNum = document.querySelectorAll('.nut-wrap .nut_card p')[1]
 var fatNum = document.querySelectorAll('.nut-wrap .nut_card p')[2]
 var urlRecipe = document.querySelector('.Recipe_buttonDesg')
+var showAllbtn = document.querySelector(".Showall_button")
+var popupContent = document.querySelector(".popup-content")
+var closebtn = document.querySelector(".close-btn")
 
 if(bigImg){
   bigImg.src = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.image
@@ -35,3 +38,12 @@ if(fatNum) {
 if(urlRecipe) {
     urlRecipe.href = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.url
 }
+
+showAllbtn.addEventListener("click", function(){
+popupContent.classList.remove("hide")
+
+})
+    
+closebtn.addEventListener("click", function(){
+    popupContent.classList.add("hide")
+})
