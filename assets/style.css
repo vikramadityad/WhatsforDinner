@@ -395,7 +395,6 @@ ul li {
 
 h1 {
   font-size: 36px;
-  font-family: serif;
   margin-bottom: 10px;
 }
 
@@ -529,13 +528,33 @@ h1 {
   text-align: center;
   font-size: 1.5rem;
   width: 1000px;
+  margin-bottom: 30px;
 }
 .vegan-btn {
   font-size: 2rem;
   border-radius: 50px;
   margin-bottom: 25px;
 }
+.vegan-recipe {
+  display: flex;
+  justify-content: space-evenly;
+}
+.vegan-left {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.vegan-left ul {
+  padding: 0;
+}
+.vegan-right {
+  width: 30%;
+}
+.vegan-right ul {
+  padding: 0;
+}
 
+/* media queries  */
 @media screen and (min-width: 600px) {
   .body {
     width: 100%;

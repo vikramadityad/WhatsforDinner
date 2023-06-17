@@ -32,13 +32,15 @@ randBtn.addEventListener("click", function () {
         veganIngredientList.appendChild(newLi);
       }
       for (let j = 0; j < data.method.length; j++) {
+        let breakLine = document.createElement("br");
         let Li = document.createElement("li");
         step = j + 1;
         ing = data.method[j];
         let recLi = ing[`Step ${step}`];
         console.log(recLi);
-        Li.innerText = `Step${j + 1}: ${recLi}`;
+        Li.innerText = `${j + 1}:    ${recLi}`;
         veganRecipeList.appendChild(Li);
+        veganRecipeList.appendChild(breakLine);
       }
     })
     .catch((e) => {
