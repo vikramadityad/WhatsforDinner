@@ -519,6 +519,7 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
+
 .vegan-image {
   width: 600px;
   height: 400px;
@@ -529,7 +530,9 @@ h1 {
 .vegan-title {
   text-align: center;
   width: 700px;
+  margin-top: 20px;
 }
+
 .vegan-p {
   margin-top: 30px;
   text-align: center;
@@ -540,7 +543,26 @@ h1 {
 .vegan-btn {
   font-size: 2rem;
   border-radius: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
+}
+.hovertext {
+  position: relative;
+}
+.hovertext::before {
+  content: attr(data-hover);
+  visibility: hidden;
+  color: black;
+  position: absolute;
+  z-index: 1;
+  left: 140px;
+  top: 20px;
+  text-align: center;
+  width: 400px;
+  font-size: 15px;
+  transition: opacity 4s ease-in-out;
+}
+.hovertext:hover::before {
+  visibility: visible;
 }
 .vegan-recipe {
   display: flex;
