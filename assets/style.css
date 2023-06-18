@@ -554,8 +554,8 @@ h1 {
   color: black;
   position: absolute;
   z-index: 1;
-  left: 140px;
-  top: 20px;
+  left: -120px;
+  top: 75px;
   text-align: center;
   width: 400px;
   font-size: 15px;
@@ -590,15 +590,36 @@ h1 {
 }
 
 /* media queries  */
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   .body {
     width: 100%;
   }
+  header {
+    flex-direction: column;
+  }
+  .navigation {
+    margin: 0;
+    text-align: center;
+    padding-top: 15px;
+  }
+  .footer-icon {
+    margin-right: 0;
+  }
+  .footer-icon svg {
+    width: 20px;
+}
+.footer-logo{
+  font-size: 20px;
+  margin-left: 0;
 }
 
-@media screen and (min-width: 768px) {
+
+@media screen and (max-width: 768px) {
   .body {
     width: 100%;
+  }
+  .logo {
+    font-size: 20px;
   }
 }
 

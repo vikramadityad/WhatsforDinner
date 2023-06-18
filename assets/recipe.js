@@ -93,8 +93,6 @@ for (let i = 0; i < ingList.length; i++) {
   imgCard[i].src = `./assets/icons/${ingList[i].toLowerCase()}.png`;
 }
 
-newfunc = () => {};
-
 function RenderHistory() {
   var historyUrl = JSON.parse(localStorage.getItem("finalData"));
   console.log(historyUrl);
