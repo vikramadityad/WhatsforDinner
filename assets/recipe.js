@@ -16,24 +16,8 @@ var ing_smCard = document.querySelectorAll(".ing_smCard");
 var showAllbtn = document.querySelector(".Showall_button");
 var popupContent = document.querySelector(".popup-content");
 var closebtn = document.querySelector(".close-btn");
-
-var showAllbtn = document.querySelector(".Showall_button");
-var popupContent = document.querySelector(".popup-content");
-var closebtn = document.querySelector(".close-btn");
 var popupList = document.querySelector(".popupList");
 
-var bigImg = document.querySelector("#recipe_image img");
-var title = document.querySelector(".recpieDesc h2");
-var mealType = document.querySelector(".recpieDesc p");
-var calNum = document.querySelectorAll(".nut-wrap .nut_card p")[0];
-var proNum = document.querySelectorAll(".nut-wrap .nut_card p")[1];
-var fatNum = document.querySelectorAll(".nut-wrap .nut_card p")[2];
-var urlRecipe = document.querySelector(".Recipe_buttonDesg");
-var historyRecipe = document.querySelector(".dropdown-menu");
-
-var showAllbtn = document.querySelector(".Showall_button");
-var popupContent = document.querySelector(".popup-content");
-var closebtn = document.querySelector(".close-btn");
 
 if (bigImg) {
   bigImg.src = JSON.parse(localStorage.finalData)[
