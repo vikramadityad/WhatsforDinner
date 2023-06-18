@@ -7,49 +7,57 @@ var calNum = document.querySelectorAll('.nut-wrap .nut_card p')[0]
 var proNum = document.querySelectorAll('.nut-wrap .nut_card p')[1]
 var fatNum = document.querySelectorAll('.nut-wrap .nut_card p')[2]
 var urlRecipe = document.querySelector('.Recipe_buttonDesg')
-var historyRecipe = document.querySelector('.dropdown-menu') 
+var historyRecipe = document.querySelector('.dropdown-menu')
 
-var ingridCard = document.querySelectorAll('.c-card-title c-card_format')
+var ingridCard = document.querySelectorAll('.c-card-body h5')
+var imgCard = document.querySelectorAll('.ing_smCard img')
 
 
 var showAllbtn = document.querySelector(".Showall_button")
 var popupContent = document.querySelector(".popup-content")
 var closebtn = document.querySelector(".close-btn")
 
-if(bigImg){
-  bigImg.src = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.image
+
+
+if (bigImg) {
+    bigImg.src = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.image
 }
 
-if(title){
-    title.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.label 
+if (title) {
+    title.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.label
 }
 
-if(mealType) {
+if (mealType) {
     mealType.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.mealType
 }
 console.log(mealType);
-if(calNum) {
+if (calNum) {
     calNum.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.totalNutrients.ENERC_KCAL.quantity.toFixed()
 }
 
-if(proNum) {
+if (proNum) {
     proNum.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.totalNutrients.PROCNT.quantity.toFixed()
 }
 
-if(fatNum) {
+if (fatNum) {
     fatNum.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.totalNutrients.FAT.quantity.toFixed()
 }
 
-if(urlRecipe) {
+if (urlRecipe) {
     urlRecipe.href = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.url
 }
 
-if(ingridCard) {
-    ingridCard.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.ingredients.food
-}
-console.log(ingridCard)
 
+const ingList = localStorage.getItem("ingredientSelected").split(",");
+ingridCard.forEach((e, i) => {
+    e.textContent = ingList[i];
+    console.log(e.textContent)
+});
 
+imgCard.forEach((e, i) => {
+    e.src = `./assets/icons/${ingList[i].toLowerCase()}.png`
+    console.log(e.src)
+});
 
 
 function RenderHistory() {
@@ -57,19 +65,19 @@ function RenderHistory() {
     console.log(historyUrl)
     for (i = 0; i < 5; i++) {
         var html = `<li><a class="dropdown-item" href="${historyUrl[i].recipe.url}" target="_blank">${historyUrl[i].recipe.label}</a></li>`
-        historyRecipe.insertAdjacentHTML("beforeend",html)
+        historyRecipe.insertAdjacentHTML("beforeend", html)
 
-  }
+    }
 }
 RenderHistory();
 
 
 
-showAllbtn.addEventListener("click", function(){
-popupContent.classList.remove("hide")
+showAllbtn.addEventListener("click", function () {
+    popupContent.classList.remove("hide")
 
 })
-    
-closebtn.addEventListener("click", function(){
+
+closebtn.addEventListener("click", function () {
     popupContent.classList.add("hide")
 })

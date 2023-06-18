@@ -155,6 +155,9 @@ let pickIngredient = $(".ing_smCard").click(function (e) {
   ingList.append(newList1);
   ingList2.appendChild(newList2);
   console.log(ingSearchTerm);
+  localStorage.setItem("ingredientSelected",ingSearchTerm);
+ 
+ 
 });
 
 //added API URL and fetching the data from Edamam
