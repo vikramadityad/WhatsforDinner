@@ -10,6 +10,7 @@ var urlRecipe = document.querySelector('.Recipe_buttonDesg')
 var showAllbtn = document.querySelector(".Showall_button")
 var popupContent = document.querySelector(".popup-content")
 var closebtn = document.querySelector(".close-btn")
+var popupList = document.querySelector(".popupList")
 
 if(bigImg){
   bigImg.src = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.image
@@ -41,9 +42,23 @@ if(urlRecipe) {
 
 showAllbtn.addEventListener("click", function(){
 popupContent.classList.remove("hide")
+showAllbtn.classList.add("hide")
+if(popupList) {
+    var ingredientList = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.ingredients
+ popupList.innerText = '';
+    for (var i=0; i<ingredientList.length; i++ ){
+    // popupList.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.ingredients[i].food
+  var li = document.createElement("li")
+  li.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.ingredients[i].food
+  popupList.appendChild(li)
+  console.log(li.innerText)
 
+}
+
+}
 })
     
 closebtn.addEventListener("click", function(){
     popupContent.classList.add("hide")
+    showAllbtn.classList.remove("hide")
 })
