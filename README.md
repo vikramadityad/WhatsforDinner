@@ -26,9 +26,10 @@ WHEN I "Home" button
 THEN I go to home page
 
 ## Images:
-
-
-
+![page1](https://github.com/vikramadityad/WhatsforDinner/assets/65060199/442c6782-32fc-4f1a-a6a1-78da55b334f2)
+![page2](https://github.com/vikramadityad/WhatsforDinner/assets/65060199/b572ad30-04af-4439-8b98-061b1bf03efd)
+![page3](https://github.com/vikramadityad/WhatsforDinner/assets/65060199/e1e260b7-eedd-40bb-80d9-70428a8c4aa2)
+![page4](https://github.com/vikramadityad/WhatsforDinner/assets/65060199/231d4011-d896-4b1f-8cd2-df83c55f40f0)
 
 
 ## Usage Instructions:
