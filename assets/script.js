@@ -192,7 +192,6 @@ for (i of searchBtn) {
       localStorage.setItem("finalData", LocalFinalData);
 
       if (finalData.length < 6) {
-        console.log("sorry no recipe's found");
         herobanner.classList.add("hide");
         recipeError.classList.remove("hide");
         return;
