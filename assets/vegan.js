@@ -9,8 +9,6 @@ const vgRecTitle = document.querySelector("#vg-rec-title");
 const veganFooter = document.querySelector(".vegan-footer");
 var historyRecipe = document.querySelector(".dropdown-menu");
 let ing = "";
-// let num = "";
-// let step = 1;
 
 randBtn.addEventListener("click", function () {
   veganFooter.classList.remove("vegan-footer");
@@ -25,7 +23,6 @@ randBtn.addEventListener("click", function () {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
       display.textContent = data.title;
       description.textContent = data.description;
       veganImage.src = data.image;
@@ -43,7 +40,6 @@ randBtn.addEventListener("click", function () {
         step = j + 1;
         ing = data.method[j];
         let recLi = ing[`Step ${step}`];
-        console.log(recLi);
         Li.innerText = `${recLi}`;
         veganRecipeList.appendChild(Li);
         veganRecipeList.appendChild(breakLine);
