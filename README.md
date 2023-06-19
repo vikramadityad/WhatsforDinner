@@ -26,11 +26,10 @@ WHEN I "Home" button
 THEN I go to home page
 
 ## Images:
-assets\images\page1.png
-assets\images\page1.png
-assets\images\page2.png
-assets\images\page3.png
-assets\images\page4.png
+
+
+
+
 
 ## Usage Instructions:
 1. Open the application on your local device
@@ -54,25 +53,25 @@ assets\images\page4.png
 19. Click "Generate" button
 20. Random Vegan recipe will be displayed
 21. Click "Home" button to be redirected to Home page
-22. Click "History" link in the right top corner of the page
-23. Dropdown with the 5 last recipes search results will be displayed
+22. Click "More Recipes" link in the right top corner of the page
+23. Dropdown with 5 more recipes search results will be displayed
 
 
 ## Link 
 
-The following links lead to gitgub repository with the project and application live URL.
+The following links lead to github repository with the project and application live URL.
 
 https://github.com/vikramadityad/WhatsforDinner
 
 
 ## Built With:
-HTML & CSS
-JavaScript
-Bootstrap
-jQuery
-Visual Studio Code
-Edamam
-Rapid API
+HTML & CSS, 
+JavaScript, 
+Bootstrap, 
+jQuery, 
+Visual Studio Code, 
+Edamam, 
+Rapid API.
 
 
 ## Credits
