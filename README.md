@@ -76,7 +76,7 @@ Rapid API.
 
 
 ## Credits
-N/A
+All imaages from unsplash.com, icons used from uxwing.com. All legal to use for commercial projects without attribution.
 
 ## License
 MIT license 
