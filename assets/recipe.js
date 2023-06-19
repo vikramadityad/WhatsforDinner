@@ -8,11 +8,9 @@ var proNum = document.querySelectorAll(".nut-wrap .nut_card p")[1];
 var fatNum = document.querySelectorAll(".nut-wrap .nut_card p")[2];
 var urlRecipe = document.querySelector(".Recipe_buttonDesg");
 var historyRecipe = document.querySelector(".dropdown-menu");
-
 var ingridCard = document.querySelectorAll(".c-card-body h5");
 var imgCard = document.querySelectorAll(".ing_smCard img");
 var ing_smCard = document.querySelectorAll(".ing_smCard");
-
 var showAllbtn = document.querySelector(".Showall_button");
 var popupContent = document.querySelector(".popup-content");
 var closebtn = document.querySelector(".close-btn");
@@ -35,7 +33,7 @@ if (mealType) {
     Number(localStorage.findex)
   ].recipe.mealType;
 }
-console.log(mealType);
+
 if (calNum) {
   calNum.innerText = JSON.parse(localStorage.finalData)[
     Number(localStorage.findex)
@@ -69,21 +67,18 @@ ingridCard.forEach((e, i) => {
     imgCard[1].classList.add("hide");
   }
   e.textContent = ingList[i];
-  console.log(e.textContent);
 });
 
 if (ingList.length < 2) {
   imgCard[0].src = `./assets/icons/${ingList[0].toLowerCase()}.png`;
 } else {
   for (let i = 0; i < 2; i++) {
-    console.log(i);
     imgCard[i].src = `./assets/icons/${ingList[i].toLowerCase()}.png`;
   }
 }
 
 function RenderHistory() {
   var historyUrl = JSON.parse(localStorage.getItem("finalData"));
-  console.log(historyUrl);
   for (i = 0; i < 5; i++) {
     var html = `<li><a class="dropdown-item" href="${historyUrl[i].recipe.url}" target="_blank">${historyUrl[i].recipe.label}</a></li>`;
     historyRecipe.insertAdjacentHTML("beforeend", html);
@@ -100,13 +95,11 @@ showAllbtn.addEventListener("click", function () {
     ].recipe.ingredients;
     popupList.innerText = "";
     for (var i = 0; i < ingredientList.length; i++) {
-      // popupList.innerText = JSON.parse(localStorage.finalData)[Number(localStorage.findex)].recipe.ingredients[i].food
       var li = document.createElement("li");
       li.innerText = JSON.parse(localStorage.finalData)[
         Number(localStorage.findex)
       ].recipe.ingredients[i].food;
       popupList.appendChild(li);
-      console.log(li.innerText);
     }
   }
 });

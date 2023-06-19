@@ -155,7 +155,6 @@ let pickIngredient = $(".ing_smCard").click(function (e) {
   newList2.innerText = addIngredient;
   ingList.append(newList1);
   ingList2.appendChild(newList2);
-  console.log(ingSearchTerm);
   localStorage.setItem("ingredientSelected", ingSearchTerm);
 });
 
@@ -171,7 +170,6 @@ async function searchRecipes(query) {
   try {
     var response = await fetch(url);
     var data = await response.json();
-    console.log(data.hits);
     return data.hits; // Return the recipe results in objects
   } catch (errorType) {
     console.error("Error:", errorType);
@@ -190,7 +188,6 @@ for (i of searchBtn) {
     var recipeResults = document.querySelector("#recipeResults");
 
     searchRecipes(ingSearchTerm).then((finalData) => {
-      console.log("data", finalData);
       var LocalFinalData = JSON.stringify(finalData);
       localStorage.setItem("finalData", LocalFinalData);
 
@@ -230,7 +227,6 @@ for (i of searchBtn) {
 
 function RenderHistory() {
   var historyUrl = JSON.parse(localStorage.getItem("finalData"));
-  console.log(historyUrl);
   for (i = 0; i < 5; i++) {
     var html = `<li><a class="dropdown-item" href="${historyUrl[i].recipe.url}">${historyUrl[i].recipe.label}</a></li>`;
   }
