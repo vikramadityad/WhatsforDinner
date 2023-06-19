@@ -317,15 +317,16 @@ footer {
   .ing-lg-card {
     margin-top: 20px;
   }
+}
 
-  @media screen and (max-width: 1159px) {
-    .h1 {
-      display: none;
-    }
+@media screen and (max-width: 1159px) {
+  .h1 {
+    display: none;
   }
-  .container-food-group {
-    justify-content: flex-start;
-  }
+}
+
+.container-food-group {
+  justify-content: flex-start;
 }
 
 /* header and search added */
@@ -607,12 +608,12 @@ h1 {
   }
   .footer-icon svg {
     width: 20px;
+  }
+  .footer-logo {
+    font-size: 20px;
+    margin-left: 0;
+  }
 }
-.footer-logo{
-  font-size: 20px;
-  margin-left: 0;
-}
-
 
 @media screen and (max-width: 768px) {
   .body {
@@ -671,4 +672,14 @@ h1 {
   .sm-card-container {
     margin-left: 85px;
   }
+}
+
+#recipeError {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 35%;
+  align-items: center;
+  margin: 10px auto;
+  text-align: center;
 }

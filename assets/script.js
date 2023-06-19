@@ -26,8 +26,9 @@ const cardOne = document.querySelector("#card1");
 const cardTwo = document.querySelector("#card2");
 const cardThree = document.querySelector("#card3");
 const cardFour = document.querySelector("#card4");
-var historyRecipe = document.querySelector('.dropdown-menu')
-
+const recipeError = document.querySelector(".recipeError");
+const resetBtn = document.querySelector("#resetBtn");
+var historyRecipe = document.querySelector(".dropdown-menu");
 
 // variables
 let addIngredient = "";
@@ -155,9 +156,7 @@ let pickIngredient = $(".ing_smCard").click(function (e) {
   ingList.append(newList1);
   ingList2.appendChild(newList2);
   console.log(ingSearchTerm);
-  localStorage.setItem("ingredientSelected",ingSearchTerm);
- 
- 
+  localStorage.setItem("ingredientSelected", ingSearchTerm);
 });
 
 //added API URL and fetching the data from Edamam
@@ -195,6 +194,13 @@ for (i of searchBtn) {
       var LocalFinalData = JSON.stringify(finalData);
       localStorage.setItem("finalData", LocalFinalData);
 
+      if (finalData.length < 6) {
+        console.log("sorry no recipe's found");
+        herobanner.classList.add("hide");
+        recipeError.classList.remove("hide");
+        return;
+      }
+
       herobanner.classList.add("hide");
 
       resultClick[0].querySelector("img").src = finalData[0].recipe.image;
@@ -212,7 +218,7 @@ for (i of searchBtn) {
         finalData[3].recipe.label;
 
       recipeResults.classList.remove("hide");
-
+      RenderHistory();
       for (let i = 0; i < resultClick.length; i++) {
         resultClick[i].addEventListener("click", function () {
           localStorage.setItem("findex", this.dataset.index);
@@ -223,12 +229,14 @@ for (i of searchBtn) {
 }
 
 function RenderHistory() {
-  var historyUrl = JSON.parse(localStorage.getItem("finalData"))
-  console.log(historyUrl)
+  var historyUrl = JSON.parse(localStorage.getItem("finalData"));
+  console.log(historyUrl);
   for (i = 0; i < 5; i++) {
-      var html = `<li><a class="dropdown-item" href="${historyUrl[i].recipe.url}">${historyUrl[i].recipe.label}</a></li>`
-      historyRecipe.insertAdjacentHTML("beforeend",html)
+    var html = `<li><a class="dropdown-item" href="${historyUrl[i].recipe.url}">${historyUrl[i].recipe.label}</a></li>`;
+  }
+}
 
-}
-}
-RenderHistory();
+resetBtn.addEventListener("click", function () {
+  recipeError.classList.add("hide");
+  location.href = "index.html";
+});
