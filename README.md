@@ -62,9 +62,9 @@ THEN I go to home page
 
 The following links lead to github repository with the project and application live URL.
 
-https://github.com/vikramadityad/WhatsforDinner
+https://github.com/tatiana404/WhatsforDinner/tree/main
 
-Live URL: https://vikramadityad.github.io/WhatsforDinner/index.html
+Live URL: https://tatiana404.github.io/WhatsforDinner/
 
 
 ## Built With:
