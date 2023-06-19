@@ -18,7 +18,6 @@ var popupContent = document.querySelector(".popup-content");
 var closebtn = document.querySelector(".close-btn");
 var popupList = document.querySelector(".popupList");
 
-
 if (bigImg) {
   bigImg.src = JSON.parse(localStorage.finalData)[
     Number(localStorage.findex)
@@ -73,8 +72,13 @@ ingridCard.forEach((e, i) => {
   console.log(e.textContent);
 });
 
-for (let i = 0; i < ingList.length; i++) {
-  imgCard[i].src = `./assets/icons/${ingList[i].toLowerCase()}.png`;
+if (ingList.length < 2) {
+  imgCard[0].src = `./assets/icons/${ingList[0].toLowerCase()}.png`;
+} else {
+  for (let i = 0; i < 2; i++) {
+    console.log(i);
+    imgCard[i].src = `./assets/icons/${ingList[i].toLowerCase()}.png`;
+  }
 }
 
 function RenderHistory() {

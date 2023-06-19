@@ -7,7 +7,7 @@ const veganIngredientList = document.querySelector("#vegan-ingredient-list");
 const vgIngTitle = document.querySelector("#vg-ing-title");
 const vgRecTitle = document.querySelector("#vg-rec-title");
 const veganFooter = document.querySelector(".vegan-footer");
-var historyRecipe = document.querySelector('.dropdown-menu')
+var historyRecipe = document.querySelector(".dropdown-menu");
 let ing = "";
 // let num = "";
 // let step = 1;
@@ -53,14 +53,3 @@ randBtn.addEventListener("click", function () {
       console.log("error", e);
     });
 });
-
-function RenderHistory() {
-  var historyUrl = JSON.parse(localStorage.getItem("finalData"))
-  console.log(historyUrl)
-  for (i = 0; i < 5; i++) {
-      var html = `<li><a class="dropdown-item" href="${historyUrl[i].recipe.url}">${historyUrl[i].recipe.label}</a></li>`
-      historyRecipe.insertAdjacentHTML("beforeend",html)
-
-}
-}
-RenderHistory();
